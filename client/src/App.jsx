@@ -1,19 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './pages/Login';
-import Welcome from './pages/Welcome';
-import Unauthorized from './pages/Unauthorized';
+import './index.css';
 
-const App = () => {
+function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/welcome" element={<Welcome />} />
-        <Route path="/unauthorized" element={<Unauthorized />} />
-      </Routes>
-    </Router>
+    <div>
+      <h1>Welcome to the App</h1>
+      <a href="/auth/github">Login with GitHub</a>
+      <br />
+      <a href="/auth/youtube">Login with YouTube</a>
+      <br />
+      <a href="/profile">Profile</a>
+    </div>
   );
-};
+}
 
 export default App;
